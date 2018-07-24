@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 import java.util.Optional;
@@ -15,7 +16,13 @@ import java.util.Optional;
 public class HomeController {
     @Autowired
     private UserJPA userJPA;
+
     @RequestMapping("/")
+    public ModelAndView Index(){
+        return new ModelAndView("index");
+    }
+
+    @RequestMapping("/list")
     public List<UserInfo> Hello(){
         return userJPA.findAll();
     }
