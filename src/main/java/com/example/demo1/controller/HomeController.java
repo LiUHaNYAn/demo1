@@ -19,7 +19,7 @@ public class HomeController {
 
     @RequestMapping("/")
     public ModelAndView Index(){
-        return new ModelAndView("index");
+        return new ModelAndView("/home/index");
     }
 
     @RequestMapping("/list")
