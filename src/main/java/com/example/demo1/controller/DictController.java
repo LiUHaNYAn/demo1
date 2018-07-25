@@ -15,7 +15,7 @@ import java.util.List;
 public class DictController {
     @Autowired
     private DictJPA dictJPA;
-    @Cacheable
+    @Cacheable(cacheNames = "dict.list")
     @RequestMapping("/dict/list")
     public List<Dict> dicts(){
         return dictJPA.findAll();

@@ -16,6 +16,7 @@ public class CacheConfiguration extends CachingConfigurerSupport {
         RedisCacheManager cacheManager = RedisCacheManager.create(factory);
         //设置缓存过期时间
 //        cacheManager.setDefaultExpiration(10000);
+
         return cacheManager;
     }
 
