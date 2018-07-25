@@ -16,7 +16,6 @@ import java.util.Optional;
 public class HomeController {
     @Autowired
     private UserJPA userJPA;
-
     @RequestMapping("/")
     public ModelAndView Index(){
         return new ModelAndView("/home/index");
